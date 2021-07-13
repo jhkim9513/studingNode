@@ -1,1 +1,2 @@
-hello
+hello, jhkim!
+ bye, jhkim!
