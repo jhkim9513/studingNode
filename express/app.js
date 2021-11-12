@@ -30,6 +30,12 @@ app.get('/', (req, res, next) => {
     console.log('first');
     // next('route'); // 'route'를하면 그 다음 요청으로 넘어가기에 first2 가 생략된다.
     // next(new Error('error'))
+
+    /* 만약 같은 콜백함수에서 둘 이상의 send가 있다면 */
+    if(true) {
+        return res.send('true!!'); //return으로 콜백함수에서 나가서 두 번의 send가 나타나지 않게 하자
+    }
+    res.send('false!!');
 }, (req, res, next) => {
     console.log('first2');
 })
