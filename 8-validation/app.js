@@ -5,7 +5,8 @@ const app = express();
 app.use(express.json());
 
 const validate = (req, res, next) => {
-  const errors = validationResult(req);
+  //validationResult는 등록한 유효성검사에 문제가 있는지 없는지 체크.
+  const errors = validationResult(req); 
   if (errors.isEmpty()) {
     return next();
   }
